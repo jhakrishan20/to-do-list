@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TO-DO lists</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    />
 </head>
 <body>
-    <h1>to-do-lists</h1>
-    <form action="/" method="post">
-        
-        <% for(i=0;i<items.length;i++){ %>
-            <li><%=items[i]%></li>
-            <input type="submit" value="Delete" class="btn btn-md btn-primary mx-2" name="delete"><br><br>
-        <% } %>
-        <input type="text" placeholder="new item" name="newItem" autocomplete="off">
-        <input type="submit" value="Save" class="btn btn-md btn-primary mx-2" name="save">
-    </form>
+    <div class="container">
+        <form action="/" method="post" align="center">
+            <h1>TO-DO-LIST</h1>
+            
+            <% for(i=0;i<items.length;i++){ %>
+                <li type="1"><%=items[i]%></li>
+                <input type="submit" value="Delete" class="btn btn-md btn-primary mx-2" name="delete"><br><br>
+            <% } %>
+            <input type="text" placeholder="new item" name="newItem" autocomplete="off">
+            <input type="submit" value="Save" class="btn btn-md btn-primary mx-2" name="save">
+        </form>
+    </div>
 </body>
 </html>
