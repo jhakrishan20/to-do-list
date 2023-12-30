@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO lists</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>to-do-lists</h1>
+    <form action="/" method="post">
+        
+        <% for(i=0;i<items.length;i++){ %>
+            <li><%=items[i]%></li>
+            <input type="submit" value="Delete" class="btn btn-md btn-primary mx-2" name="delete"><br><br>
+        <% } %>
+        <input type="text" placeholder="new item" name="newItem" autocomplete="off">
+        <input type="submit" value="Save" class="btn btn-md btn-primary mx-2" name="save">
+    </form>
+</body>
+</html>
